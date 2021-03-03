@@ -1,12 +1,18 @@
-joblib==1.0.1
-numpy==1.20.1
-pandas==1.2.3
-python-box==5.3.0
-python-dateutil==2.8.1
-pytz==2021.1
-PyYAML==5.4.1
-scikit-learn==0.24.1
-scipy==1.6.1
-six==1.15.0
-sklearn==0.0
-threadpoolctl==2.1.0
+from setuptools import setup
+
+with open("requirements.txt") as f:
+    required = f.read().splitlines()
+
+with open("README.md", encoding='utf-8') as f:
+    long_description = f.read()
+
+setup(
+	name="Production_Code",
+	description="Learning Production Code",
+	long_description=long_description,
+    long_description_content_type='text/markdown',
+	version=0.1,
+	author="Skand Upmanyu",
+	author_email="upmanyuskand@gmail.com",
+	install_requires=required
+	)
