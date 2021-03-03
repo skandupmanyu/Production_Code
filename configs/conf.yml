@@ -1,0 +1,24 @@
+base:
+  labels:
+    x_var: ["foo", "bar", "baz"]
+    y_var: ["y"]
+  model:
+    classifier_module: "sklearn.ensemble"
+    classifier_name: "RandomForestClassifier"
+    classifier_params:
+      n_estimators: 100
+      max_depth: 5
+      random_state: 42
+
+dev:
+  training_data_path: "./deployments/dev/training_data.csv"
+  scoring_data_path: "./deployments/dev/scoring_data.csv"
+  output_data_path: "./deployments/dev/output.csv"
+
+prod:
+  training_data_path: "./deployments/prod/training_data.csv"
+  scoring_data_path: "./deployments/prod/scoring_data.csv"
+  output_data_path: "./deployments/prod/output.csv"
+
+
+
