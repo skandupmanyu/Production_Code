@@ -11,14 +11,14 @@ base:
       random_state: 42
 
 dev:
-  training_data_path: "./deployments/dev/training_data.csv"
-  scoring_data_path: "./deployments/dev/scoring_data.csv"
-  output_data_path: "./deployments/dev/output.csv"
+  training_data_path: "../deployments/dev/training_data.csv"
+  scoring_data_path: "../deployments/dev/scoring_data.csv"
+  output_data_path: "../deployments/dev/output.csv"
 
 prod:
-  training_data_path: "./deployments/prod/training_data.csv"
-  scoring_data_path: "./deployments/prod/scoring_data.csv"
-  output_data_path: "./deployments/prod/output.csv"
+  training_data_path: "../deployments/prod/training_data.csv"
+  scoring_data_path: "../deployments/prod/scoring_data.csv"
+  output_data_path: "../deployments/prod/output.csv"
 
 
 

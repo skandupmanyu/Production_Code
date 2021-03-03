@@ -1,32 +1,11 @@
 import pandas as pd
 import numpy as np
-import yaml
-import argparse
-from box import Box
 import importlib
 import warnings
+from config import parse_arguments
+from config import parse_yml
+
 warnings.filterwarnings("ignore")
-
-def parse_arguments():
-
-	parser = argparse.ArgumentParser()
-	parser.add_argument("--conf")
-	parser.add_argument("--deployment")
-
-	args = parser.parse_args()
-
-	return args
-
-
-def parse_yml(args):
-
-	with open(args.conf) as ymlfile:
-		conf = yaml.safe_load(ymlfile)
-
-	conf = Box({**conf["base"], **conf[args.deployment]})
-
-
-	return conf
 
 def run(args, conf):
 
@@ -61,5 +40,5 @@ def run(args, conf):
 
 if __name__ == "__main__":
 	args = parse_arguments()
-	conf = parse_yml(args)
+	conf = parse_yml(args.conf, args.deployment)
 	run(args, conf)
